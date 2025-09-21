@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Monigue Demo';
+    src: url('fonts/monigue-demo.regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 /* Navigation Styles */
 .floating-nav {
     position: fixed;
