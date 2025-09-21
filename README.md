@@ -1,0 +1,2 @@
+# SimplyStrips
+Personal Website
