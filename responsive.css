@@ -1,0 +1,119 @@
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 120px;
+    }
+    .hero-title .word-strip {
+        display: block;
+        margin: 0 auto 8px auto;
+    }
+    .hero-title .word-strip:nth-child(2),
+    .hero-title .word-strip:nth-child(3) {
+        display: inline-block;
+        margin: 0 6px 8px 0;
+    }
+    .products-header h2 {
+        text-align: center;
+        width: 100%;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+    body {
+        padding: 0 0 40px 0;
+    }
+    .floating-nav {
+        flex-direction: column;
+        gap: 16px;
+        padding: 12px 8px;
+        width: 95vw;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.1rem;
+    }
+    .logo {
+        font-size: 2.1rem;
+        text-align: center;
+    }
+    .nav-links {
+        gap: 12px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero {
+        height: auto;
+        padding: 40px 0 20px 0;
+    }
+    .hero-title {
+        font-size: 2.1rem;
+        padding: 0 0 10px 0;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    .products {
+        padding: 2rem 0.5rem;
+    }
+    .products-header h2 {
+        font-size: 1.5rem;
+    }
+    .products-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 0 0.5rem;
+    }
+    .product-card {
+        width: 95vw;
+        max-width: 350px;
+        padding: 1.2rem 0.7rem;
+    }
+    .product-icon img {
+        width: 90px;
+        height: 90px;
+    }
+    .product-card h3 {
+        font-size: 1.1rem;
+    }
+    .flavor {
+        font-size: 0.95rem;
+    }
+    .product-card p {
+        font-size: 1rem;
+    }
+    .buy-button {
+        font-size: 1rem;
+        padding: 0.6rem 1.1rem;
+    }
+    .steps {
+        flex-direction: column;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .step {
+        max-width: 95vw;
+    }
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .steps {
+        gap: 30px;
+    }
+    
+    .step {
+        max-width: 220px;
+        padding: 25px;
+    }
+}
+}

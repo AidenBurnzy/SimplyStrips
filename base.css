@@ -1,0 +1,83 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(45deg, #ff6b9d, #ff8e53, #ffb74d);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    color: #2c2c2c;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Color Waves Background */
+.color-waves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: wave-motion 15s infinite linear;
+}
+
+.wave-1 {
+    background: radial-gradient(circle, #ff6b9d, transparent);
+    top: 10%;
+    left: -50%;
+    animation-duration: 12s;
+}
+
+.wave-2 {
+    background: radial-gradient(circle, #c2185b, transparent);
+    top: 30%;
+    right: -50%;
+    animation-duration: 18s;
+    animation-direction: reverse;
+}
+
+.wave-3 {
+    background: radial-gradient(circle, #ff8e53, transparent);
+    top: 50%;
+    left: -50%;
+    animation-duration: 14s;
+}
+
+.wave-4 {
+    background: radial-gradient(circle, #ffb74d, transparent);
+    top: 70%;
+    right: -50%;
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+
+.wave-5 {
+    background: radial-gradient(circle, #ff6b9d, transparent);
+    top: 90%;
+    left: -50%;
+    animation-duration: 16s;
+}
+
+@keyframes wave-motion {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(50%) rotate(360deg); }
+}
