@@ -1,3 +1,153 @@
+/* Enlarge Shopify Buy Button images in modal */
+.product-popup .shopify-buy__product__image,
+.product-popup .shopify-buy__carousel__image,
+.product-popup .shopify-buy__modal .shopify-buy__product__image {
+	width: 320px !important;
+	height: 320px !important;
+	max-width: 90vw !important;
+	max-height: 60vh !important;
+	object-fit: contain !important;
+	margin: 0 auto 1.5rem auto !important;
+	display: block !important;
+}
+.popup-open .product-card:hover {
+	transform: none !important;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.08) !important;
+	cursor: default !important;
+}
+/* Product Popup Modal Styles */
+.product-popup-overlay {
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: rgba(0,0,0,0.55);
+	z-index: 2000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.product-popup {
+	background: #fff;
+	border-radius: 1.5rem;
+	box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+		padding: 2rem 1.5rem 1.5rem 1.5rem;
+		max-width: 95vw;
+		width: 420px;
+		min-width: 320px;
+		box-sizing: border-box;
+		position: relative;
+		text-align: center;
+		animation: popupIn 0.25s cubic-bezier(.4,2,.6,1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* Fix Shopify modal width for Recovery popup */
+	#recovery-popup-overlay .product-popup .shopify-buy__modal {
+		max-width: 100% !important;
+		min-width: 0 !important;
+		width: 100% !important;
+		box-sizing: border-box !important;
+	}
+	.product-popup > *:not(.popup-close) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+@keyframes popupIn {
+	from { transform: scale(0.85); opacity: 0; }
+	to { transform: scale(1); opacity: 1; }
+}
+
+.popup-close {
+	position: absolute;
+	top: 18px;
+	right: 18px;
+	background: none;
+	border: none;
+	font-size: 2rem;
+	color: #888;
+	cursor: pointer;
+	transition: color 0.2s;
+}
+.popup-close:hover {
+	color: #ff6b9d;
+}
+.popup-image {
+	width: 120px;
+	height: 120px;
+	object-fit: contain;
+	margin-bottom: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.popup-title {
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+.popup-price {
+	font-size: 1.2rem;
+	color: #ff6b9d;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+.popup-description {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	color: #333;
+}
+.popup-ingredients {
+	font-size: 0.98rem;
+	margin-bottom: 1.2rem;
+	color: #444;
+	text-align: left;
+	max-width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.popup-ingredients ul {
+	margin: 0.3rem 0 0 1.2rem;
+	padding: 0;
+}
+.popup-buy {
+	display: inline-block;
+	background: linear-gradient(90deg, #ff6b9d, #ff8e53);
+	color: #fff;
+	font-weight: 600;
+	padding: 0.7rem 2rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	font-size: 1.1rem;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	transition: background 0.2s, box-shadow 0.2s;
+}
+.popup-buy:hover {
+	background: linear-gradient(90deg, #ff8e53, #ff6b9d);
+	box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+}
+
+@media (max-width: 500px) {
+	.product-popup {
+		width: 98vw;
+		padding: 1.2rem 0.3rem 1.2rem 0.3rem;
+	}
+	.popup-image {
+		width: 90px;
+		height: 90px;
+	}
+	.popup-title {
+		font-size: 1.2rem;
+	}
+}
 /* Products Section Styles */
 .products {
 	padding: 4rem 1rem;

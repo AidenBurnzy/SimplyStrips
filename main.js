@@ -19,6 +19,10 @@ async function loadSection(containerId, filename) {
         const response = await fetch(filename);
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;
+        // If products section loaded, initialize popups
+        if (containerId === 'products-container' && typeof window.initializeProductPopups === 'function') {
+            window.initializeProductPopups();
+        }
     } catch (error) {
         console.error(`Error loading ${filename}:`, error);
     }
@@ -67,9 +71,10 @@ function initializeParallax() {
 function initializeProductCardEffects() {
     document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-10px) scale(1.02)';
+            if (!document.body.classList.contains('popup-open')) {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            }
         });
-        
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0) scale(1)';
         });
